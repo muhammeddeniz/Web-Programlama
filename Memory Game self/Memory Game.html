@@ -1,0 +1,151 @@
+<html>
+
+<head>
+    <title>Memory Game</title>
+
+    <script>
+        var resimler = ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png", "9.png"];
+
+        var ilkOyun = false;
+        var ilkHamle = false;
+        var resimkontrol1, resimkontrol2;
+        var resim2, resim1;
+        var temp = 0;
+        var oyunBasladiMi = false;
+        var counter = 0;
+
+        function Goster(i) {
+            if (ilkHamle == false) {
+                if (oyunBasladiMi == false) {
+                    Arrayshuffle(resimler);
+                }
+                oyunBasladiMi = true;
+                document.getElementById(i).src = resimler[i];
+                ilkHamle = true;
+                resim1 = document.getElementById(i);
+                resimkontrol1 = resimler[i];
+                counter++;
+            }else if(ilkHamle == true && document.getElementById(i) != resim1){
+                resim2 = document.getElementById(i);
+                resim2.src = resimler[i];
+                ilkHamle = false;
+                resimkontrol2 = resimler[i];
+                document.getElementById("counter").value = counter;
+
+            }
+
+        }
+        function hide(i) {
+
+            if (resimkontrol1 != resimkontrol2 && ilkHamle == false && oyunBasladiMi == true) {
+                resim2.src = "ilk.png";
+                resim1.src = "ilk.png";
+            } else if (resimkontrol1 == resimkontrol2 && ilkHamle == true) {
+                document.getElementById(i).onmousedown = "";
+                document.getElementById(i).onmouseup = "";
+                
+                resim1.onmousedown = "";
+                resim1.onmouseup = "";
+                
+            }
+
+        }
+        function bos(){
+
+        }
+        function Arrayshuffle(a) {
+            var j, x, i;
+            for (i = a.length - 1; i > 0; i--) {
+                j = Math.floor(Math.random() * (i + 1));
+                x = a[i]
+                a[i] = a[j];
+                a[j] = x;
+            }
+            return a;
+        }
+    </script>
+
+</head>
+
+
+
+<style>
+    .resim {
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        margin: 5px;
+        border-width: 5px;
+        border-color: #0066CC;
+        border-style: single;
+        background: rgb(0, 255, 195);
+    }
+
+    body {
+        text-align: center;
+        padding-top: 30px;
+        background: linear-gradient(rgb(0, 145, 34), rgb(16, 16, 152));
+    }
+
+    .changed {
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        margin: 5px;
+        border-width: 5px;
+        border-color: #0066CC;
+        border-style: single;
+        background: red;
+    }
+
+    .counter1 {
+        width: 100px;
+        height: 40px;
+        font-size: 40px;
+        background: linear-gradient(to right, rgb(200, 255, 0), rgb(62, 71, 42));
+        color: white;
+        border: 0;
+        text-align: center;
+    }
+
+    .hamle {
+        font-size: 40px;
+        font: bold;
+        margin: 0px;
+        color: aqua;
+    }
+</style>
+
+<body>
+    <p class="hamle">HAMLE: </p>
+    <br><input type="text" id="counter" class="counter1" value="0">
+    <hr><br>
+    <div class="body">
+        <div>
+            <img class="resim" id="1" src="ilk.png" name="bir" onmousedown="Goster(1)" onmouseup="hide(1)">
+            <img class="resim" id="2" src="ilk.png" name="iki" onmousedown="Goster(2)" onmouseup="hide(2)">
+            <img class="resim" id="3" src="ilk.png" name="uc" onmousedown="Goster(3)" onmouseup="hide(3)">
+            <img class="resim" id="4" src="ilk.png" name="dort" onmousedown="Goster(4)" onmouseup="hide(4)">
+        </div>
+        <div>
+            <img class="resim" id="5" src="ilk.png" name="bes" onmousedown="Goster(5)" onmouseup="hide(5)">
+            <img class="resim" id="6" src="ilk.png" name="alti" onmousedown="Goster(6)" onmouseup="hide(6)">
+            <img class="resim" id="7" src="ilk.png" name="yedi" onmousedown="Goster(7)" onmouseup="hide(7)">
+            <img class="resim" id="8" src="ilk.png" name="sekiz" onmousedown="Goster(8)" onmouseup="hide(8)">
+        </div>
+        <div>
+            <img class="resim" id="9" src="ilk.png" name="on" onmousedown="Goster(9)" onmouseup="hide(9)">
+            <img class="resim" id="10" src="ilk.png" name="onbir" onmousedown="Goster(10)" onmouseup="hide(10)">
+            <img class="resim" id="11" src="ilk.png" name="oniki" onmousedown="Goster(11)" onmouseup="hide(11)">
+            <img class="resim" id="12" src="ilk.png" name="onuc" onmousedown="Goster(12)" onmouseup="hide(12)">
+        </div>
+        <div>
+            <img class="resim" id="13" src="ilk.png" name="onuc" onmousedown="Goster(13)" onmouseup="hide(13)">
+            <img class="resim" id="14" src="ilk.png" name="ondort" onmousedown="Goster(14)" onmouseup="hide(14)">
+            <img class="resim" id="15" src="ilk.png" name="onbes" onmousedown="Goster(15)" onmouseup="hide(15)">
+            <img class="resim" id="16" src="ilk.png" name="onaltı" onmousedown="Goster(16)" onmouseup="hide(16)">
+        </div>
+    </div>
+</body>
+
+</html>
