@@ -1,0 +1,18 @@
+.kronometre{
+    padding-top: 10%;
+    text-align: center;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px;
+    background: url("img1.jpg");
+    color: aqua;
+
+}
+input[type = button]{
+    font-size: 35px;
+    border: 0;
+    padding: 8px;
+    color:  aqua;
+    background: rgba(29, 27, 27, 0.7);
+}
