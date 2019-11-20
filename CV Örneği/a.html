@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <title>Cv Örneği</title>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#p1").fadeIn(2000);
+            $("#p2").fadeIn(2800);
+            $("#p3").fadeIn(3600);
+            $("#p4").fadeIn(4400);
+
+            $("#p1").click(function () {
+                $(".dil").hide();
+                $(".mezuniyetler").hide();
+                $(".deneyimler").hide();
+                $(".genelOzellik").fadeIn(4000);
+            });
+            $("#p2").click(function () {
+                $(".genelOzellik").hide();
+                $(".dil").hide();
+                $(".deneyimler").hide();
+                $(".mezuniyetler").fadeIn(4000);
+            });
+            $("#p3").click(function () {
+                $(".genelOzellik").hide();
+                $(".mezuniyetler").hide();
+                $(".deneyimler").hide();
+                $(".dil").fadeIn(4000);
+            });
+            $("#p4").click(function () {
+                $(".genelOzellik").hide();
+                $(".mezuniyetler").hide();
+                $(".dil").hide();
+                $(".deneyimler").fadeIn(4000);
+            });
+        });
+    </script>
+
+    <style>
+        body{
+            margin: 0;
+        }
+        .solTaraf {
+            float: left;
+            padding: 0;
+            background-color: rgba(49, 41, 140, 0.918);
+            height: 110%;
+            width: 20%;
+            color: rgb(0, 251, 255);
+            padding-left: 10px;
+        }
+
+        .sagtaraf {
+            background-color: rgb(5, 14, 113);
+            height: 100%;
+            color: white;
+            padding-left: 40%;
+            padding-top: 80px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="solTaraf">
+        <br><br><br><br>
+        <p id="p1" style="display: none;">*Kişisel Bilgiler</p><br>
+        <p id="p2" style="display: none;">*Mezuniyetler</p><br>
+        <p id="p3" style="display: none;">*Bildiği Programlama Dilleri</p><br>
+        <p id="p4" style="display: none;">*İş Deneyimleri</p><br>
+    </div>
+
+    <div class="sagtaraf">
+
+        <div style="display: none;" class="genelOzellik">
+            <ul style="color: white">
+                <h1>Kişisel Bilgiler : </h1>
+                <ul>
+                    <li>Takım Çalişmasına Yatkın</li><br>
+                    <li>Yazılım Geliştirme</li><br>
+                    <li>Kriz Yönetimi</li><br>
+                    <li>Kulanıcı Desteği Sağlayabilmek</li><br>
+                    <li>Çözüm Odaklı Olmak</li>
+                </ul>
+            </ul>
+            <br><br><br>
+        </div>
+        <div style="display: none;" class="mezuniyetler">
+            <ul style="color: white">
+                <h1>Mezuniyetler : </h1>
+                <ul>
+                    <li>Bakirçay Üniversitesi Yüksek Lİsans Eğitimi</li><br>
+                    <li>Bakirçay Üniversitesi Lisans Eğitimi</li><br>
+                    <li>AA Anadolu Lisesi</li><br>
+                    <li>BB Ortaokulu</li><br>
+                    <li>CC İlkokulu</li>
+                </ul>
+            </ul>
+            <br><br><br>
+        </div>
+        <div style="display: none;" class="dil">
+            <ul style="color: white">
+                <h1>Bildiği Programlama Dilleri : </h1>
+                <ul>
+                    <li>C Sharp </li><br>
+                    <li>Python</li><br>
+                    <li>Javascript</li><br>
+                    <li>Java</li><br>
+                    <li>PHP</li>
+                </ul>
+            </ul>
+            <br><br><br>
+        </div>
+        <div style="display: none;" class="deneyimler">
+            <ul style="color: white">
+                <h1>İş Deneyimleri : </h1>
+                <ul>
+                    <li>Vestel 3 ay</li><br>
+                    <li>Trendyol 3 yıl</li><br>
+                    <li>Finansbank 2 yıl</li><br>
+                    <li>Yemek Sepeti 4 yıl</li><br>
+                </ul>
+            </ul>
+            <br><br><br>
+        </div>
+
+    </div>
+</body>
+
+</html>
