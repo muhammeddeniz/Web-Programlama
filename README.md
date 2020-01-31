@@ -1,2 +1,2 @@
 # Web-Programlama
-Web İle ilgili örnek Projeleer
+Web ile ilgili basit Projeleer
